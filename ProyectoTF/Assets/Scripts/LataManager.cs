@@ -5,7 +5,7 @@ using UnityEngine;
 public class LataManager : MonoBehaviour
 {
     private Transform _tr;
-    private int _timer;
+    private float _timer;
 
     [SerializeField] private GameObject _lata;
 
@@ -25,6 +25,6 @@ public class LataManager : MonoBehaviour
             _timer = 10; // getter del gamemanager
         }
 
-        --_timer;
+        _timer -= Time.deltaTime;
     }
 }
